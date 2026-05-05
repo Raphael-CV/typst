@@ -24,7 +24,7 @@ const ENV_PATH_SEP: char = if cfg!(windows) { ';' } else { ':' };
 /// The overall structure of the help.
 #[rustfmt::skip]
 const HELP_TEMPLATE: &str = "\
-Typst {version}
+Typst RdCV {version}
 
 {usage-heading} {usage}
 
@@ -44,7 +44,7 @@ const AFTER_HELP: &str = color_print::cstr!("\
 /// The Typst compiler.
 #[derive(Debug, Clone, Parser)]
 #[clap(
-    name = "typst",
+    name = "typst-rdcv",
     version = format!("{} ({})", crate::typst_version(), crate::typst_commit_sha()),
     author,
     help_template = HELP_TEMPLATE,

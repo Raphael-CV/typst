@@ -532,7 +532,7 @@ fn format_human_readable(value: &Info) -> io::Result<()> {
     let mut out = terminal::out();
 
     write_key(&mut out, "Version", None)?;
-    write!(out, " ")?;
+    write!(out, " RdCV ")?;
     write_value_simple(&mut out, value.version, None)?;
     write!(out, " (")?;
     write_value_simple(&mut out, value.build.commit, None)?;

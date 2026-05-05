@@ -13,7 +13,7 @@ license = { workspace = true }
 readme = { workspace = true }
 
 [[bin]]
-name = "typst"
+name = "typst-rdcv"
 path = "src/main.rs"
 doc = false
 
