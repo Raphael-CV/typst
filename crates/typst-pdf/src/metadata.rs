@@ -26,7 +26,7 @@ pub(crate) fn build_metadata(gc: &GlobalContext, doc_lang: Option<Locale>) -> Me
         .options
         .creator
         .clone()
-        .unwrap_or_else(|| Some(format!("Typst {}", typst_utils::version().raw())))
+        .unwrap_or_else(|| Some(format!("Typst {} – RdCV", typst_utils::version().raw())))
     {
         metadata = metadata.creator(creator);
     }
