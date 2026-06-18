@@ -41,7 +41,7 @@ pub(crate) fn handle_link(
             let Some(dest) = pos_to_xyz(&gc.page_index_converter, *p) else {
                 return Ok(());
             };
-            Target::Destination(krilla::destination::Destination::Xyz(dest))
+            Target::Destination(krilla::destination::Destination::XyzDirect(dest))
         }
         Destination::Location(loc) => {
             if let Some(resolver) = gc.link_resolver
@@ -69,7 +69,7 @@ pub(crate) fn handle_link(
                 let Some(dest) = pos_to_xyz(&gc.page_index_converter, pos) else {
                     return Ok(());
                 };
-                Target::Destination(krilla::destination::Destination::Xyz(dest))
+                Target::Destination(krilla::destination::Destination::XyzDirect(dest))
             }
         }
     };
